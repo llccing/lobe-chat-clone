@@ -28,7 +28,7 @@ export const checkAuthMethod = ({
   // clerk auth handler
   if (enableClerk) {
     // if there is no userId, means the use is not login, just throw error
-    /* eslint-disable-next-line */
+    /* eslint-disable-next-line no-unsafe-optional-chaining */
     if (!clerkAuth?.userId) throw AgentRuntimeError.createError(ChatErrorType.InvalidClerkUser);
     // if the user is login, just return
     else return;
